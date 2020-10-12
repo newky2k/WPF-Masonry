@@ -12,7 +12,7 @@
     <Authors>Lizzaran newky2k</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Version>2.0</Version>
-    <Description>Fluid layout grid for WPF (Net Core 3.x and .Net Framework)</Description>
+    <Description>Fluid layout grid for WPF (Net Core 3.x, .Net Framework and .Net 5+)</Description>
     <PackageProjectUrl>https://github.com/newky2k/WPF-Masonry</PackageProjectUrl>
     <RepositoryUrl>https://github.com/newky2k/WPF-Masonry</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
