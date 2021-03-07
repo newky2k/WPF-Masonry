@@ -1,12 +1,14 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.23">
 
   <PropertyGroup>
-    <TargetFrameworks>uap10.0.18362;net5.0-windows10.0.18362.0</TargetFrameworks>
+    <TargetFrameworks>uap10.0.18362;net5.0-windows10.0.18362</TargetFrameworks>
     <RootNamespace>XamlMasonry</RootNamespace>
     <AssemblyName>XamlMasonry</AssemblyName>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <Configurations>Debug;Release</Configurations>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" $(TargetFramework.StartsWith('net5.0-windows10')) ">
@@ -24,6 +26,11 @@
 
     <Compile Include="**\*.winui.cs" />
     <Compile Include="**\*.winui.*.cs" />
+
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     
   </ItemGroup>
 
@@ -32,6 +39,15 @@
     <Compile Include="**\*.uwp.cs" />
     <Compile Include="**\*.uwp.*.cs" />
 
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <None Remove="Themes\Generic.xaml" />
+  </ItemGroup>
+
 </Project>
