@@ -1,53 +1,15 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.23">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<RootNamespace>MasonryWinUI</RootNamespace>
+		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+		<UseWinUI>true</UseWinUI>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFrameworks>uap10.0.18362;net5.0-windows10.0.18362</TargetFrameworks>
-    <RootNamespace>XamlMasonry</RootNamespace>
-    <AssemblyName>XamlMasonry</AssemblyName>
-    <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <Configurations>Debug;Release</Configurations>
-    <EnableDefaultPageItems>false</EnableDefaultPageItems>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" $(TargetFramework.StartsWith('net5.0-windows10')) ">
-    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
-    <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64;win10-arm</RuntimeIdentifiers>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="**\*.shared.cs" />
-    <Compile Include="**\*.shared.*.cs" />
-  </ItemGroup>
-  
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('net5.0-windows10')) ">
-    <PackageReference Include="Microsoft.WinUI" Version="3.0.0-preview4.210210.4" />
-
-    <Compile Include="**\*.winui.cs" />
-    <Compile Include="**\*.winui.*.cs" />
-
-    <Page Include="Themes\Generic.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
-
-    <Compile Include="**\*.uwp.cs" />
-    <Compile Include="**\*.uwp.*.cs" />
-
-    <Page Include="Themes\Generic.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Themes\Generic.xaml" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" />
+	</ItemGroup>
 
 </Project>

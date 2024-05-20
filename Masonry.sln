@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31005.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Masonry", "Masonry\Masonry.csproj", "{E2BA75BF-C535-46B9-A180-E10533A1C1D1}"
 EndProject
@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPSample", "UWPSample\UWPS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPMasonry", "UWPMasonry\UWPMasonry.csproj", "{CDB0FEA7-AE2F-4BA1-AD67-871B764CD05A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlMasonry", "XamlMasonry\XamlMasonry.csproj", "{A9E8ED59-D96B-4A1D-93EE-29015884F05A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamlMasonry", "XamlMasonry\XamlMasonry.csproj", "{A9E8ED59-D96B-4A1D-93EE-29015884F05A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
