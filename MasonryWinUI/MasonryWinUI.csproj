@@ -6,7 +6,31 @@
 		<RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) >= 8">win-x86;win-x64;win-arm64</RuntimeIdentifiers>
 		<RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &lt; 8">win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
 		<UseWinUI>true</UseWinUI>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageId>LoDaTek.MasonryWinUI</PackageId>
+		<Title>Masonry for WinUI</Title>
+		<AssemblyName>MasonryWinUI</AssemblyName>
+		<Product>$(AssemblyName) ($(TargetFramework))</Product>
+		<Authors>newky2k</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>2.1</Version>
+		<Description>Fluid layout grid for WinUI</Description>
+		<PackageProjectUrl>https://github.com/newky2k/WPF-Masonry</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/newky2k/WPF-Masonry</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageTags>WinUI Masonry Fluid</PackageTags>
+		<PackageReleaseNotes>
+			Updated to work with .NET 8.0
+		</PackageReleaseNotes>
+		<Copyright>Copyright 2024 LoDaTek Ltd</Copyright>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../readme.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240428000" />
