@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MasonryWinUI.Example (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "MasonryWinUI.Example (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

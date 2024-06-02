@@ -13,26 +13,17 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
-steps:
-
-- task: UseDotNet@2
-  displayName: Install Latest .Net Core 3.1.x
-  inputs:
-    packageType: 'sdk'
-    version: '3.1.x'
-
+steps:  
 - task: NuGetToolInstaller@1
   displayName: Install Latest Nuget
 
-- task: NuGetCommand@2
-  displayName: Nuget Restore
+- task: DotNetCoreCLI@2
   inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  displayName: Build Solution
+    command: 'restore'
+    projects: '*.sln'
+  
+- task: DotNetCoreCLI@2
+  displayName: dotnet build
   inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
+    projects: '$(solution)'
+    arguments: '--configuration=$(buildConfiguration) /p:Platform="$(buildPlatform)"'

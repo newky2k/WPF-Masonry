@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Documents;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 
-// The Templated Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234235
-
-namespace UWPMasonry
+namespace MasonryWinUI
 {
     public class MasonryControl : ItemsControl
     {
@@ -24,7 +14,7 @@ namespace UWPMasonry
         /// <summary>
         ///     The spacing property
         /// </summary>
-        public static readonly DependencyProperty SpacingProperty = DependencyProperty.Register(nameof(Spacing),typeof(int), typeof(MasonryControl), null);
+        public static readonly DependencyProperty SpacingProperty = DependencyProperty.Register(nameof(Spacing), typeof(int), typeof(MasonryControl), null);
 
 
         #endregion
@@ -86,7 +76,7 @@ namespace UWPMasonry
         {
             this.DefaultStyleKey = typeof(MasonryControl);
 
-           
+
         }
 
         #region Methods
@@ -181,7 +171,7 @@ namespace UWPMasonry
             return base.MeasureOverride(availableSize);
         }
 
-         
+
         ///// <summary>
         /////     Raises the <see cref="E:System.Windows.FrameworkElement.SizeChanged" /> event, using the specified information as
         /////     part of the eventual event data.
