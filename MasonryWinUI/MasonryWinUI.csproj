@@ -26,6 +26,8 @@
 		</PackageReleaseNotes>
 		<Copyright>Copyright 2024 LoDaTek Ltd</Copyright>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+		<GenerateLibraryLayout>true</GenerateLibraryLayout>
 	</PropertyGroup>
 
 	<ItemGroup>
