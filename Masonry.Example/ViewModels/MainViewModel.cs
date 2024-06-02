@@ -24,6 +24,7 @@ namespace Masonry.Example.ViewModels
 {
     using System;
     using System.Collections.ObjectModel;
+    using System.Mvvm;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Input;
@@ -31,10 +32,7 @@ namespace Masonry.Example.ViewModels
 
     using Masonry.Example.Common;
 
-    using Prism.Commands;
-    using Prism.Mvvm;
-
-    internal class MainViewModel : BindableBase
+    internal class MainViewModel : ViewModel
     {
         #region Fields
 

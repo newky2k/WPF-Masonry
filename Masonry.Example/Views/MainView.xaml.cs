@@ -20,6 +20,8 @@
 
 #endregion License
 
+using Masonry.Example.ViewModels;
+
 namespace Masonry.Example.Views
 {
     /// <summary>
@@ -27,11 +29,21 @@ namespace Masonry.Example.Views
     /// </summary>
     public partial class MainView
     {
+        private MainViewModel _viewModel;
+
+        private MainViewModel ViewModel
+        {
+            get { return _viewModel; }
+            set { _viewModel = value; DataContext = _viewModel; }
+        }
+
         #region Constructors and Destructors
 
         public MainView()
         {
             this.InitializeComponent();
+
+            ViewModel = new MainViewModel();
         }
 
         #endregion

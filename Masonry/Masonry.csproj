@@ -12,13 +12,13 @@
 		<Authors>Lizzaran newky2k</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Version>2.1</Version>
-		<Description>Fluid layout grid for WPF (Net Core 3.x and .Net Framework)</Description>
+		<Description>Fluid layout grid for WPF (.NET 8 and .Net Framework)</Description>
 		<PackageProjectUrl>https://github.com/newky2k/WPF-Masonry</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/newky2k/WPF-Masonry</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 		<PackageTags>WPF Masonry Fluid</PackageTags>
 		<PackageReleaseNotes>
-			Updated to work with Net Core
+			Updated to work with .NET 8.0
 		</PackageReleaseNotes>
 		<Copyright>Copyright 2013 - 2016 Nikita Bernthaler</Copyright>
 	</PropertyGroup>
