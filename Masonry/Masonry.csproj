@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net461;net8-windows</TargetFrameworks>
+		<TargetFrameworks>net461;net8-windows;net9-windows</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -12,13 +12,13 @@
 		<Authors>Lizzaran newky2k</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Version>2.1</Version>
-		<Description>Fluid layout grid for WPF (.NET 8 and .Net Framework)</Description>
+		<Description>Fluid layout grid for WPF (.NET 8+ and .Net Framework)</Description>
 		<PackageProjectUrl>https://github.com/newky2k/WPF-Masonry</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/newky2k/WPF-Masonry</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 		<PackageTags>WPF Masonry Fluid</PackageTags>
 		<PackageReleaseNotes>
-			Updated to work with .NET 8.0
+			Updated to work with .NET 9.0
 		</PackageReleaseNotes>
 		<Copyright>Copyright 2013 - 2016 Nikita Bernthaler</Copyright>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
