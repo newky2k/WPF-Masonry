@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net461;net8-windows;net9-windows</TargetFrameworks>
+		<TargetFrameworks>net461;net8-windows;net9-windows;net8.0-windows10.0.18362;net9.0-windows10.0.18362;</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
