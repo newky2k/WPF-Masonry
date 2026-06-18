@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net461;net8-windows;net9-windows;net8.0-windows10.0.18362;net9.0-windows10.0.18362;</TargetFrameworks>
+		<TargetFrameworks>net462;net10.0-windows;net10.0-windows10.0.18362;</TargetFrameworks>
 		<UseWPF>true</UseWPF>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -10,21 +10,21 @@
 		<AssemblyName>Masonry</AssemblyName>
 		<Product>$(AssemblyName) ($(TargetFramework))</Product>
 		<Authors>Lizzaran newky2k</Authors>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<Version>2.1</Version>
-		<Description>Fluid layout grid for WPF (.NET 8+ and .Net Framework)</Description>
+		<Description>Fluid layout grid for WPF (.NET 10 and .Net Framework)</Description>
 		<PackageProjectUrl>https://github.com/newky2k/WPF-Masonry</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/newky2k/WPF-Masonry</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 		<PackageTags>WPF Masonry Fluid</PackageTags>
 		<PackageReleaseNotes>
-			Updated to work with .NET 9.0
+			Updated to work with .NET 10.0
 		</PackageReleaseNotes>
-		<Copyright>Copyright 2013 - 2016 Nikita Bernthaler</Copyright>
+		<Copyright>Copyright 2013 - 2016 Nikita Bernthaler, Copyright 2026 LoDaTek Ltd</Copyright>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="../readme.md" Pack="true" PackagePath="\" />
+		<None Include="readme.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 </Project>
