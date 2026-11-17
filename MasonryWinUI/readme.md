@@ -2,7 +2,7 @@
 
 A fluid, "Windows 8 tile"–style layout grid for **WinUI 3 / Windows App SDK**. Arranges variable-sized children into a tightly packed, gap-filling layout that reflows as items are added, removed, or resized.
 
-Targets .NET 10 (`net10.0-windows10.0.19041.0`). Requires the Windows App SDK.
+Targets .NET 10 and .NET 11 (`net10.0-windows10.0.19041.0`, `net11.0-windows10.0.19041.0`). Requires the Windows App SDK.
 
 ## Install
 
