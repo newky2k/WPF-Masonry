@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net10.0-windows10.0.19041.0;</TargetFrameworks>
+		<TargetFrameworks>net10.0-windows10.0.19041.0;net11.0-windows10.0.19041.0</TargetFrameworks>
 		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
 		<RootNamespace>MasonryWinUI</RootNamespace>
 		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
@@ -25,17 +25,19 @@
 		</PackageReleaseNotes>
 		<Copyright>Copyright 2026 LodaTek Ltd</Copyright>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageIcon>DSIcon.png</PackageIcon>
 		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
 		<GenerateLibraryLayout>true</GenerateLibraryLayout>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="readme.md" Pack="true" PackagePath="\" />
+		<None Include="..\DSIcon.png" Pack="true" PackagePath="\" Visible="false" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240428000" />
-		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.1839" />
 	</ItemGroup>
 
 </Project>

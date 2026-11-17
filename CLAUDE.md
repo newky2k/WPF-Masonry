@@ -6,25 +6,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Masonry is a fluid, "Windows 8 tile"–style layout grid control. Two parallel implementations share the same packing algorithm:
 
-- **`Masonry/`** — the original WPF control (NuGet package `wpfmasonry`). Multi-targets `net461`, `net8/9-windows`, and `net8/9.0-windows10.0.18362`.
-- **`MasonryWinUI/`** — a WinUI 3 / Windows App SDK port (NuGet package `LoDaTek.MasonryWinUI`). Targets `net8/9.0-windows10.0.19041.0`.
+- **`Masonry/`** — the original WPF control (NuGet package `wpfmasonry`). Multi-targets `net462`, `net10.0-windows`, `net11.0-windows`, `net10.0-windows10.0.18362` and `net11.0-windows10.0.18362`.
+- **`MasonryWinUI/`** — a WinUI 3 / Windows App SDK port (NuGet package `LoDaTek.MasonryWinUI`). Targets `net10.0-windows10.0.19041.0` and `net11.0-windows10.0.19041.0`.
 
 Each library has a matching example app: `Masonry.Example/` (WPF) and `MasonryWinUI.Example/` (WinUI).
 
 ## Build & Run
 
-The solution is `Masonry.slnx` (the new XML solution format — the old `Masonry.sln` and `global.json` were removed). Note: the Azure pipelines still glob `**/*.sln`, so CI and local builds may diverge until the pipelines are updated to `.slnx`.
+The solution is `Masonry.slnx` (the new XML solution format — the old `Masonry.sln` and `global.json` were removed). Build with the .NET 10 and .NET 11 SDKs.
+
+CI is GitHub Actions (`.github/workflows/`) on `windows-latest`: `ci.yml` builds Release for pull requests into `master` and `development`; `release.yml` runs on every push to `master`, builds Release as `3.0.<yyMM>.<run number>`, pushes `wpfmasonry` and `LoDaTek.MasonryWinUI` to nuget.org with Trusted Publishing (OIDC, `NUGET_USER` secret, `nuget` environment), then tags the commit and creates a GitHub release.
 
 ```bash
 # Build everything
 dotnet build Masonry.slnx -c Release
 
 # Build a single project / target framework
-dotnet build Masonry/Masonry.csproj -c Release -f net9-windows
+dotnet build Masonry/Masonry.csproj -c Release -f net10.0-windows
 
 # Run the example apps (WinUI needs an explicit platform)
 dotnet run --project Masonry.Example
-dotnet run --project MasonryWinUI.Example -c Debug -f net9.0-windows10.0.19041.0 -r win-x64
+dotnet run --project MasonryWinUI.Example -c Debug -f net10.0-windows10.0.19041.0 -r win-x64
 ```
 
 `GeneratePackageOnBuild` is on for both libraries, so a Release build emits `.nupkg` files. There is no test project.
