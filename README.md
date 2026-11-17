@@ -6,8 +6,8 @@ Two implementations are provided from the same packing algorithm:
 
 | Technology | Package | Docs |
 |---|---|---|
-| **WPF** (.NET 10 & .NET Framework 4.6.2) | [`wpfmasonry`](https://www.nuget.org/packages/wpfmasonry) | [Masonry/readme.md](Masonry/readme.md) |
-| **WinUI 3** (Windows App SDK, .NET 10) | [`LoDaTek.MasonryWinUI`](https://www.nuget.org/packages/LoDaTek.MasonryWinUI) | [MasonryWinUI/readme.md](MasonryWinUI/readme.md) |
+| **WPF** (.NET 10, .NET 11 & .NET Framework 4.6.2) | [`wpfmasonry`](https://www.nuget.org/packages/wpfmasonry) | [Masonry/readme.md](Masonry/readme.md) |
+| **WinUI 3** (Windows App SDK, .NET 10 & .NET 11) | [`LoDaTek.MasonryWinUI`](https://www.nuget.org/packages/LoDaTek.MasonryWinUI) | [MasonryWinUI/readme.md](MasonryWinUI/readme.md) |
 
 ## How it works
 
@@ -50,7 +50,7 @@ See the per-technology docs above for full usage, and the `Masonry.Example` / `M
 
 ## Building
 
-The solution is `Masonry.slnx` (requires the .NET 10 SDK on Windows; the WinUI projects also need the Windows App SDK workload).
+The solution is `Masonry.slnx` (requires the .NET 10 and .NET 11 SDKs on Windows; the WinUI projects also need the Windows App SDK workload).
 
 ```powershell
 dotnet build Masonry.slnx -c Release

@@ -2,7 +2,7 @@
 
 A fluid, "Windows 8 tile"–style layout grid for **WPF**. Arranges variable-sized children into a tightly packed, gap-filling layout that reflows as items are added, removed, or resized.
 
-Targets .NET 10 (`net10.0-windows`) and .NET Framework 4.6.2 (`net462`).
+Targets .NET 10 (`net10.0-windows`), .NET 11 (`net11.0-windows`) and .NET Framework 4.6.2 (`net462`).
 
 ## Install
 
