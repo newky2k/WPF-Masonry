@@ -15,7 +15,7 @@ Each library has a matching example app: `Masonry.Example/` (WPF) and `MasonryWi
 
 The solution is `Masonry.slnx` (the new XML solution format — the old `Masonry.sln` and `global.json` were removed). Build with the .NET 10 and .NET 11 SDKs.
 
-CI is GitHub Actions (`.github/workflows/`) on `windows-latest`: `ci.yml` builds Release for pull requests into `master` and `development`; `release.yml` runs on every push to `master`, builds Release as `3.0.<yyMM>.<run number>`, pushes `wpfmasonry` and `LoDaTek.MasonryWinUI` to nuget.org with Trusted Publishing (OIDC, `NUGET_USER` secret, `nuget` environment), then tags the commit and creates a GitHub release.
+CI is GitHub Actions (`.github/workflows/`) on `windows-latest`: `ci.yml` builds Release for pull requests into `main` and `development`; `release.yml` runs on every push to `main`, builds Release as `3.0.<yyMM>.<run number>`, pushes `wpfmasonry` and `LoDaTek.MasonryWinUI` to nuget.org with Trusted Publishing (OIDC, `NUGET_USER` secret, `nuget` environment), then tags the commit and creates a GitHub release.
 
 ```bash
 # Build everything
